@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-heading: 'Lora', serif;
+    --font-body: 'Raleway', sans-serif;
+
+    --color-brand-primary: #0A0A0A;
+    --color-brand-secondary: #2D241E;
+    --color-brand-accent: #FFFFFF;
+    --color-brand-bg: #F5F5F5;
+    --color-brand-text: #0A0A0A;
+    --color-brand-muted: #A1A1AA;
+
+    --shadow-luxury: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+    --shadow-luxury-hover: 0 20px 60px -15px rgba(0, 0, 0, 0.15);
+}
+
+@layer base {
+    body {
+        @apply font-body text-brand-text bg-brand-bg antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading;
+    }
+}
