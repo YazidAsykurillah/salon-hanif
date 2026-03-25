@@ -388,24 +388,24 @@
                             <!-- Address -->
                             <div>
                                 <span class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 mb-6 block">The Address</span>
-                                <p class="text-2xl md:text-4xl font-heading italic leading-relaxed">Jl. Durian Raya No. 12C,<br>,Srondol Wetan, Banyumanik Kota Semarang</p>
+                                <p class="text-2xl md:text-4xl font-heading italic leading-relaxed">Jl. Durian Raya No. 12C<br>Srondol Wetan, Banyumanik Kota Semarang</p>
                             </div>
 
                             <!-- Opening Hours -->
                             <div>
                                 <span class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 mb-6 block">Studio Hours</span>
                                 <div class="grid grid-cols-2 gap-y-4 max-w-sm">
-                                    <span class="text-sm tracking-wide text-white/60">Mon — Sat</span>
-                                    <span class="text-sm font-heading italic text-right">09:00 — 20:00</span>
-                                    <span class="text-sm tracking-wide text-white/60">Sunday</span>
-                                    <span class="text-sm font-heading italic text-right">Closed</span>
+                                    <span class="text-sm tracking-wide text-white/60">Mon — Fri</span>
+                                    <span class="text-sm font-heading italic text-right">09:00 a.m — 16:00 p.m</span>
+                                    <span class="text-sm tracking-wide text-white/60">Sat — Sun</span>
+                                    <span class="text-sm font-heading italic text-right">10:00 a.m — 17:00 p.m</span>
                                 </div>
                             </div>
 
                             <!-- Contact -->
                             <div>
                                 <span class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 mb-6 block">Quick Inquiries</span>
-                                <a href="tel:+6281291513745" class="text-2xl md:text-4xl font-heading italic border-b border-white/10 pb-1 hover:border-white transition-colors block w-fit">+62 812 9151 3745</a>
+                                <a href="https://wa.me/+6281291513745" target="_blank" class="text-2xl md:text-4xl font-heading italic border-b border-white/10 pb-1 hover:border-white transition-colors block w-fit">+62 812 9151 3745</a>
                             </div>
                         </div>
                     </div>
