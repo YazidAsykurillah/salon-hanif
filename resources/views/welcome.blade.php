@@ -36,7 +36,7 @@
             <!-- Right: Action -->
             <a href="#contact" id="header-action" class="text-[10px] md:text-xs font-semibold tracking-[0.1em] md:tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500 whitespace-nowrap">
                 <span class="hidden md:inline">Book Appointment</span>
-                <span class="md:hidden">Book Appointment</span>
+                <span class="md:hidden">Book</span>
             </a>
         </nav>
     </header>
