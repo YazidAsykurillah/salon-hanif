@@ -18,24 +18,25 @@
 <body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-secondary selection:text-white">
     <!-- Navigation -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-transparent">
-        <nav id="header-nav" class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between transition-all duration-500">
+        <nav id="header-nav" class="max-w-[1440px] mx-auto px-6 md:px-8 h-24 flex items-center justify-between transition-all duration-500">
             <!-- Left: Menu -->
-            <button id="header-menu-btn" class="flex items-center gap-3 group text-white transition-colors duration-500">
-                <div class="w-6 flex flex-col gap-1.5">
+            <button id="header-menu-btn" class="flex items-center gap-2 md:gap-3 group text-white transition-colors duration-500">
+                <div class="w-5 md:w-6 flex flex-col gap-1 md:gap-1.5">
                     <span class="h-0.5 w-full bg-current transition-all group-hover:w-4"></span>
                     <span class="h-0.5 w-full bg-current transition-all"></span>
                 </div>
-                <span class="text-xs font-semibold tracking-[0.2em] uppercase hidden md:block">Menu</span>
+                <span class="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase hidden sm:block">Menu</span>
             </button>
 
             <!-- Center: Logo -->
-            <a href="/" id="header-logo" class="absolute left-1/2 -translate-x-1/2 text-2xl font-bold tracking-[0.4em] text-white uppercase transition-all duration-500">
+            <a href="/" id="header-logo" class="md:absolute md:left-1/2 md:-translate-x-1/2 text-sm md:text-2xl font-bold tracking-[0.2em] md:tracking-[0.4em] text-white uppercase transition-all duration-500 whitespace-nowrap">
                 SALON HANIF
             </a>
 
             <!-- Right: Action -->
-            <a href="#contact" id="header-action" class="text-xs font-semibold tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500">
-                Book Appointment
+            <a href="#contact" id="header-action" class="text-[10px] md:text-xs font-semibold tracking-[0.1em] md:tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500 whitespace-nowrap">
+                <span class="hidden md:inline">Book Appointment</span>
+                <span class="md:hidden">Book</span>
             </a>
         </nav>
     </header>
@@ -44,7 +45,7 @@
         <!-- Hero Section -->
         <section class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
             <div class="absolute inset-0">
-                <img src="{{ asset('images/ever_hero_beauty.png') }}" alt="Beauty Detail" class="w-full h-full object-cover opacity-80 brightness-90 animate-subtle-zoom">
+                <img src="{{ asset('images/indonesian_beauty_hero.png') }}" alt="Beauty Detail" class="w-full h-full object-cover opacity-80 brightness-90 animate-subtle-zoom">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20"></div>
             </div>
             
@@ -147,15 +148,15 @@
         <section id="about" class="bg-brand-secondary text-white py-40">
             <div class="max-w-[1440px] mx-auto px-8 flex flex-col lg:flex-row gap-24 items-center">
                 <div class="flex-1 order-2 lg:order-1">
-                    <h2 class="text-5xl md:text-7xl font-heading mb-12 italic lowercase">the hanif philosophy</h2>
+                    <h2 class="text-5xl md:text-7xl font-heading mb-12 italic lowercase">Our philosophy</h2>
                     <p class="text-xl md:text-2xl leading-relaxed text-white/80 max-w-2xl mb-12">We believe that beauty is not a mask, but a revelation. Our masters are trained to see the unique symmetry in every face, the natural movement in every lock, and the silent story in every detail.</p>
                     <div class="flex gap-12">
                         <div>
-                            <span class="block text-4xl font-heading italic mb-2">15</span>
-                            <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40">Years of Craft</span>
+                            <span class="block text-4xl font-heading italic mb-2">10</span>
+                            <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40">Years of Experience</span>
                         </div>
                         <div>
-                            <span class="block text-4xl font-heading italic mb-2">20k</span>
+                            <span class="block text-4xl font-heading italic mb-2">5k</span>
                             <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40">Clients Served</span>
                         </div>
                     </div>
@@ -439,8 +440,8 @@
         <div class="flex flex-col items-center justify-center h-full space-y-12">
             <nav class="text-center space-y-8">
                 <a href="#services" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">services</a>
-                <a href="#about" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">philosophy</a>
-                <a href="#portfolio" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">portfolio</a>
+                <a href="#about" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">About Us</a>
+                <a href="#portfolio" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">Gallery</a>
                 <a href="#contact" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">contact</a>
             </nav>
             
