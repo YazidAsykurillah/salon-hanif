@@ -8,6 +8,11 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="{{ asset('images/indonesian_beauty_hero.png') }}" as="image" fetchpriority="high">
+    <link rel="preload" href="{{ asset('fonts/lora-400.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('fonts/raleway-600.woff2') }}" as="font" type="font/woff2" crossorigin>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('images/salon_hanif_favicon.png') }}">
     
@@ -23,7 +28,7 @@
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-transparent">
         <nav id="header-nav" class="max-w-[1440px] mx-auto px-6 md:px-8 h-24 flex items-center justify-between transition-all duration-500">
             <!-- Left: Menu -->
-            <button id="header-menu-btn" class="flex items-center gap-2 md:gap-3 group text-white transition-colors duration-500">
+            <button id="header-menu-btn" class="flex items-center justify-center gap-2 md:gap-3 group text-white transition-colors duration-500 min-w-[48px] min-h-[48px]" aria-label="Open Navigation Menu">
                 <div class="w-5 md:w-6 flex flex-col gap-1 md:gap-1.5">
                     <span class="h-0.5 w-full bg-current transition-all group-hover:w-4"></span>
                     <span class="h-0.5 w-full bg-current transition-all"></span>
@@ -38,9 +43,9 @@
             </a>
 
             <!-- Right: Action -->
-            <a href="#contact" id="header-action" class="text-[10px] md:text-xs font-semibold tracking-[0.1em] md:tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500 whitespace-nowrap">
+            <a href="#contact" id="header-action" class="flex items-center justify-center text-[10px] md:text-xs font-semibold tracking-[0.1em] md:tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500 whitespace-nowrap min-w-[48px] min-h-[48px]" aria-label="Book an Appointment">
                 <span class="hidden md:inline">Book Appointment</span>
-                <span class="md:hidden">Book</span>
+                <span class="md:hidden px-2">Book</span>
             </a>
         </nav>
     </header>
@@ -49,7 +54,11 @@
         <!-- Hero Section -->
         <section class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
             <div class="absolute inset-0">
-                <img src="{{ asset('images/indonesian_beauty_hero.png') }}" alt="Beauty Detail" class="w-full h-full object-cover object-center md:object-right opacity-80 brightness-90 animate-subtle-zoom">
+                <img src="{{ asset('images/indonesian_beauty_hero.png') }}" 
+                     alt="Premium Indonesian Beauty Salon - Salon Hanif" 
+                     class="w-full h-full object-cover object-center md:object-right opacity-80 brightness-90 animate-subtle-zoom"
+                     fetchpriority="high"
+                     loading="eager">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>
             </div>
             
@@ -86,7 +95,10 @@
                     <!-- Service 1: Facial -->
                     <div class="group cursor-pointer">
                         <div class="aspect-[4/5] overflow-hidden bg-brand-bg mb-8">
-                            <img src="{{ asset('images/svc_facial.png') }}" alt="Facial Treatment" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000">
+                            <img src="{{ asset('images/svc_facial.png') }}" 
+                                 alt="Facial Treatment - Salon Hanif Gallery" 
+                                 class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                 loading="lazy">
                         </div>
                         <div class="text-center">
                             <h3 class="text-xl font-heading mb-3 italic">Facial Treatment</h3>
@@ -97,7 +109,10 @@
                     <!-- Service 2: Hair Styling -->
                     <div class="group cursor-pointer">
                         <div class="aspect-[4/5] overflow-hidden bg-brand-bg mb-8">
-                            <img src="{{ asset('images/svc_hair_styling.png') }}" alt="Hair Styling" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000">
+                            <img src="{{ asset('images/svc_hair_styling.png') }}" 
+                                 alt="Hair Styling - Salon Hanif Gallery" 
+                                 class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                 loading="lazy">
                         </div>
                         <div class="text-center">
                             <h3 class="text-xl font-heading mb-3 italic">Hair Styling</h3>
@@ -130,7 +145,10 @@
                     <!-- Service 5: Makeup Artist -->
                     <div class="group cursor-pointer">
                         <div class="aspect-[4/5] overflow-hidden bg-brand-bg mb-8">
-                            <img src="{{ asset('images/svc_makeup.png') }}" alt="Makeup Artist" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000">
+                            <img src="{{ asset('images/svc_makeup.png') }}" 
+                                 alt="Makeup Artist - Salon Hanif Gallery" 
+                                 class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                 loading="lazy">
                         </div>
                         <div class="text-center">
                             <h3 class="text-xl font-heading mb-3 italic">Makeup Artist</h3>
@@ -141,7 +159,10 @@
                     <!-- Service 6: Eyelash / Brow -->
                     <div class="group cursor-pointer">
                         <div class="aspect-[4/5] overflow-hidden bg-brand-bg mb-8">
-                            <img src="{{ asset('images/svc_eyelash.png') }}" alt="Eyelash / Brow" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000">
+                            <img src="{{ asset('images/svc_eyelash.png') }}" 
+                                 alt="Eyelash and Brow Enhancement - Salon Hanif" 
+                                 class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                                 loading="lazy">
                         </div>
                         <div class="text-center">
                             <h3 class="text-xl font-heading mb-3 italic">Eyelash / Brow</h3>
@@ -171,7 +192,10 @@
                 </div>
                 <div class="flex-1 order-1 lg:order-2 w-full">
                     <div class="aspect-square relative overflow-hidden">
-                        <img src="{{ asset('images/salon_hero_premium_1774021513902.png') }}" alt="Philosophy" class="w-full h-full object-cover brightness-75">
+                        <img src="{{ asset('images/salon_hero_premium_1774021513902.png') }}" 
+                             alt="Luxury Salon Interior - Our Philosophy" 
+                             class="w-full h-full object-cover brightness-75"
+                             loading="lazy">
                     </div>
                 </div>
             </div>
@@ -198,11 +222,17 @@
                     <div class="portfolio-item group transition-all duration-700" data-category="hair">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                             <div class="relative aspect-[4/5] overflow-hidden bg-brand-bg">
-                                <img src="{{ asset('images/hair_before.png') }}" alt="Hair Before" class="w-full h-full object-cover">
+                                <img src="{{ asset('images/hair_before.png') }}" 
+                                     alt="Hair Restoration Before Treatment" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
                                 <div class="absolute bottom-6 left-6 px-4 py-2 bg-black/40 backdrop-blur-md text-white text-[10px] font-bold tracking-widest uppercase">Before</div>
                             </div>
                             <div class="relative aspect-[4/5] overflow-hidden bg-brand-bg">
-                                <img src="{{ asset('images/hair_after.png') }}" alt="Hair After" class="w-full h-full object-cover">
+                                <img src="{{ asset('images/hair_after.png') }}" 
+                                     alt="Hair Restoration After Treatment" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
                                 <div class="absolute bottom-6 left-6 px-4 py-2 bg-black/40 backdrop-blur-md text-white text-[10px] font-bold tracking-widest uppercase">After</div>
                             </div>
                         </div>
@@ -254,7 +284,10 @@
                     <!-- Testimonial 1 -->
                     <div class="flex flex-col">
                         <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
-                            <img src="{{ asset('images/customer_1.png') }}" alt="Client" class="w-full h-full object-cover">
+                            <img src="{{ asset('images/customer_1.png') }}" 
+                                 alt="Client Eleanor Vane Testimonial" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy">
                         </div>
                         <div class="flex mb-4 text-brand-text">
                             <span class="text-xs">★★★★★</span>
@@ -266,7 +299,10 @@
                     <!-- Testimonial 2 -->
                     <div class="flex flex-col">
                         <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
-                            <img src="{{ asset('images/hair_after.png') }}" alt="Client" class="w-full h-full object-cover">
+                            <img src="{{ asset('images/hair_after.png') }}" 
+                                 alt="Client Sophia Chen Testimonial" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy">
                         </div>
                         <div class="flex mb-4 text-brand-text">
                             <span class="text-xs">★★★★★</span>
@@ -278,7 +314,10 @@
                     <!-- Testimonial 3 -->
                     <div class="flex flex-col">
                         <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
-                            <img src="{{ asset('images/face_after.png') }}" alt="Client" class="w-full h-full object-cover">
+                            <img src="{{ asset('images/face_after.png') }}" 
+                                 alt="Client Margot Rossi Testimonial" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy">
                         </div>
                         <div class="flex mb-4 text-brand-text">
                             <span class="text-xs">★★★★★</span>
@@ -290,7 +329,10 @@
                     <!-- Testimonial 4 -->
                     <div class="flex flex-col">
                         <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
-                            <img src="{{ asset('images/svc_makeup.png') }}" alt="Client" class="w-full h-full object-cover text-black">
+                            <img src="{{ asset('images/svc_makeup.png') }}" 
+                                 alt="Client Isabella Thorne Testimonial" 
+                                 class="w-full h-full object-cover text-black"
+                                 loading="lazy">
                         </div>
                         <div class="flex mb-4 text-brand-text">
                             <span class="text-xs">★★★★★</span>
@@ -349,7 +391,7 @@
                 </div>
 
                 <div class="mt-32 text-center">
-                    <a href="#" class="inline-block text-[10px] font-bold tracking-[0.4em] uppercase text-black border-b border-black pb-2 hover:text-brand-muted hover:border-brand-muted transition-all duration-500">View Full Pricing</a>
+                    <a href="#" class="inline-block text-[10px] font-bold tracking-[0.4em] uppercase text-black border-b border-black pb-2 hover:text-brand-muted hover:border-brand-muted transition-all duration-500" aria-label="View our full service prices">View Full Pricing</a>
                 </div>
             </div>
         </section>
@@ -365,7 +407,7 @@
                 
                 <div class="flex flex-col md:flex-row items-center justify-center gap-10">
                     <a href="https://wa.me/+6281291513745" class="w-full md:w-auto px-16 py-6 bg-white text-brand-primary text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-brand-bg transition-all duration-500">Book via WhatsApp</a>
-                    <button id="open-reservation" class="w-full md:w-auto px-16 py-6 border border-white/20 text-white text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-white hover:text-brand-primary transition-all duration-500">Make a Reservation</button>
+                    <button id="open-reservation" class="w-full md:w-auto px-16 py-6 border border-white/20 text-white text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-white hover:text-brand-primary transition-all duration-500" aria-label="Make a salon reservation">Make a Reservation</button>
                 </div>
             </div>
         </section>
@@ -431,12 +473,15 @@
     <footer class="bg-white py-20 border-t border-black/5">
         <div class="max-w-[1440px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-12">
             <div class="flex items-center gap-4">
-                <img src="{{ asset('images/salon_hanif_logo.png') }}" alt="Logo" class="h-12 w-auto mix-blend-multiply brightness-90 contrast-125 grayscale-0">
+                <img src="{{ asset('images/salon_hanif_logo.png') }}" 
+                     alt="Salon Hanif Primary Logo" 
+                     class="h-12 w-auto mix-blend-multiply brightness-90 contrast-125 grayscale-0"
+                     loading="lazy">
                 <span class="text-2xl font-bold tracking-[0.4em] uppercase">SALON HANIF</span>
             </div>
             <div class="flex gap-10">
-                <a href="https://www.instagram.com/salonhanif/" target="_blank" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Instagram</a>
-                <a href="#" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Facebook</a>
+                <a href="https://www.instagram.com/salonhanif/" target="_blank" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity" aria-label="Follow Salon Hanif on Instagram">Instagram</a>
+                <a href="#" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity" aria-label="Follow Salon Hanif on Facebook">Facebook</a>
             </div>
             <p class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">&copy; 2026 Crafted with precision.</p>
         </div>
@@ -476,16 +521,16 @@
             </div>
             <form class="space-y-10">
                 <div class="space-y-2">
-                    <label class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">Name</label>
-                    <input type="text" class="w-full bg-transparent border-b border-black/10 py-4 text-xl font-heading italic focus:outline-none focus:border-black transition-colors placeholder:text-black/5" placeholder="Your full name">
+                    <label for="res-name" class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">Name</label>
+                    <input id="res-name" type="text" class="w-full bg-transparent border-b border-black/10 py-4 text-xl font-heading italic focus:outline-none focus:border-black transition-colors placeholder:text-black/5" placeholder="Your full name">
                 </div>
                 <div class="space-y-2">
-                    <label class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">WhatsApp Number</label>
-                    <input type="text" class="w-full bg-transparent border-b border-black/10 py-4 text-xl font-heading italic focus:outline-none focus:border-black transition-colors placeholder:text-black/5" placeholder="+62">
+                    <label for="res-phone" class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">WhatsApp Number</label>
+                    <input id="res-phone" type="text" class="w-full bg-transparent border-b border-black/10 py-4 text-xl font-heading italic focus:outline-none focus:border-black transition-colors placeholder:text-black/5" placeholder="+62">
                 </div>
                 <div class="space-y-2">
-                    <label class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">Message</label>
-                    <textarea rows="2" class="w-full bg-transparent border-b border-black/10 py-4 text-xl font-heading italic focus:outline-none focus:border-black transition-colors placeholder:text-black/5 resize-none" placeholder="Preferred date, time, or service..."></textarea>
+                    <label for="res-message" class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">Message</label>
+                    <textarea id="res-message" rows="2" class="w-full bg-transparent border-b border-black/10 py-4 text-xl font-heading italic focus:outline-none focus:border-black transition-colors placeholder:text-black/5 resize-none" placeholder="Preferred date, time, or service..."></textarea>
                 </div>
                 <button type="submit" class="w-full py-6 bg-black text-white text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-brand-secondary transition-colors duration-500 mt-12">Confirm Request</button>
             </form>
