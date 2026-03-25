@@ -58,7 +58,7 @@
                 </p>
             </div>
 
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 group cursor-pointer animate-fade-in" style="animation-delay: 1s;">
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-4 group cursor-pointer animate-fade-in" style="animation-delay: 1s;">
                 <span class="text-[10px] font-semibold tracking-[0.3em] uppercase text-white/60 group-hover:text-white transition-colors duration-500">Scroll to Explore</span>
                 <div class="w-px h-12 bg-white/20 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-full bg-white animate-scroll-line"></div>
