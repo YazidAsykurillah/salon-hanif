@@ -8,6 +8,9 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/salon_hanif_favicon.png') }}">
+    
     <style>
         * {
             -webkit-font-smoothing: antialiased;
@@ -28,6 +31,7 @@
                 <span class="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase hidden sm:block">Menu</span>
             </button>
 
+            <!-- Center: Logo -->
             <!-- Center: Logo -->
             <a href="/" id="header-logo" class="md:absolute md:left-1/2 md:-translate-x-1/2 text-sm md:text-2xl font-bold tracking-[0.2em] md:tracking-[0.4em] text-white uppercase transition-all duration-500 whitespace-nowrap">
                 SALON HANIF
@@ -426,7 +430,10 @@
 
     <footer class="bg-white py-20 border-t border-black/5">
         <div class="max-w-[1440px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-12">
-            <span class="text-2xl font-bold tracking-[0.4em] uppercase">SALON HANIF</span>
+            <div class="flex items-center gap-4">
+                <img src="{{ asset('images/salon_hanif_logo.png') }}" alt="Logo" class="h-12 w-auto mix-blend-multiply brightness-90 contrast-125 grayscale-0">
+                <span class="text-2xl font-bold tracking-[0.4em] uppercase">SALON HANIF</span>
+            </div>
             <div class="flex gap-10">
                 <a href="https://www.instagram.com/salonhanif/" target="_blank" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Instagram</a>
                 <a href="#" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Facebook</a>
