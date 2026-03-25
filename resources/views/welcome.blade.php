@@ -36,7 +36,7 @@
             <!-- Right: Action -->
             <a href="#contact" id="header-action" class="text-[10px] md:text-xs font-semibold tracking-[0.1em] md:tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500 whitespace-nowrap">
                 <span class="hidden md:inline">Book Appointment</span>
-                <span class="md:hidden">Book</span>
+                <span class="md:hidden">Book Appointment</span>
             </a>
         </nav>
     </header>
@@ -45,23 +45,27 @@
         <!-- Hero Section -->
         <section class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
             <div class="absolute inset-0">
-                <img src="{{ asset('images/indonesian_beauty_hero.png') }}" alt="Beauty Detail" class="w-full h-full object-cover opacity-80 brightness-90 animate-subtle-zoom">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20"></div>
+                <img src="{{ asset('images/indonesian_beauty_hero.png') }}" alt="Beauty Detail" class="w-full h-full object-cover object-center md:object-right opacity-80 brightness-90 animate-subtle-zoom">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>
             </div>
             
-            <div class="relative z-10 text-center px-6 mt-auto mb-32 md:mt-0 md:mb-24">
-                <h1 class="text-4xl md:text-[6rem] font-heading italic text-white leading-tight lowercase opacity-0 translate-y-10 animate-fade-in-up">
-                    Elegant Beauty Treatments
-                </h1>
-                <p class="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/60 mt-6 opacity-0 translate-y-10 animate-fade-in-up [animation-delay:400ms]">
-                    Experience premium care for your face, hair, and body.
-                </p>
-            </div>
+            <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-8 flex flex-col md:flex-row md:items-end md:justify-between h-full pb-20 md:pb-32">
+                <!-- Left Column: Branding -->
+                <div class="text-center md:text-left mt-auto md:mt-0 mb-12 md:mb-0 max-w-4xl md:max-w-2xl">
+                    <h1 class="text-4xl md:text-[6.5rem] font-heading italic text-white leading-[1.1] lowercase opacity-0 translate-y-10 animate-fade-in-up">
+                        Elegant Beauty Treatments
+                    </h1>
+                    <p class="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/60 mt-6 md:mt-8 opacity-0 translate-y-10 animate-fade-in-up [animation-delay:400ms]">
+                        Experience premium care for your face, hair, and body.
+                    </p>
+                </div>
 
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-4 group cursor-pointer animate-fade-in" style="animation-delay: 1s;">
-                <span class="text-[10px] font-semibold tracking-[0.3em] uppercase text-white/60 group-hover:text-white transition-colors duration-500">Scroll to Explore</span>
-                <div class="w-px h-12 bg-white/20 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-full bg-white animate-scroll-line"></div>
+                <!-- Right Column: Scroll Decoration -->
+                <div class="hidden md:flex flex-col items-center gap-6 group cursor-pointer animate-fade-in" style="animation-delay: 1s;">
+                    <span class="text-[10px] font-semibold tracking-[0.3em] uppercase text-white/60 group-hover:text-white transition-colors duration-500 [writing-mode:vertical-lr] rotate-360">Scroll to Explore</span>
+                    <div class="w-px h-24 bg-white/20 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-white animate-scroll-line"></div>
+                    </div>
                 </div>
             </div>
         </section>
