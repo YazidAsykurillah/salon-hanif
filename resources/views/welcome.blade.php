@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Salon Hanif | Beauty In Every Detail</title>
+    <title>Salon Hanif | Salon Kecantikan di Semarang</title>
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -17,25 +17,25 @@
 </head>
 <body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-secondary selection:text-white">
     <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-        <nav class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-transparent">
+        <nav id="header-nav" class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between transition-all duration-500">
             <!-- Left: Menu -->
-            <button class="flex items-center gap-3 group text-white">
+            <button id="header-menu-btn" class="flex items-center gap-3 group text-white transition-colors duration-500">
                 <div class="w-6 flex flex-col gap-1.5">
-                    <span class="h-0.5 w-full bg-white transition-all group-hover:w-4"></span>
-                    <span class="h-0.5 w-full bg-white transition-all"></span>
+                    <span class="h-0.5 w-full bg-current transition-all group-hover:w-4"></span>
+                    <span class="h-0.5 w-full bg-current transition-all"></span>
                 </div>
                 <span class="text-xs font-semibold tracking-[0.2em] uppercase hidden md:block">Menu</span>
             </button>
 
             <!-- Center: Logo -->
-            <a href="/" class="absolute left-1/2 -translate-x-1/2 text-2xl font-bold tracking-[0.4em] text-white uppercase">
+            <a href="/" id="header-logo" class="absolute left-1/2 -translate-x-1/2 text-2xl font-bold tracking-[0.4em] text-white uppercase transition-all duration-500">
                 SALON HANIF
             </a>
 
             <!-- Right: Action -->
-            <a href="#contact" class="text-xs font-semibold tracking-[0.2em] text-white uppercase hover:opacity-70 transition-opacity">
-                Make An Appointment
+            <a href="#contact" id="header-action" class="text-xs font-semibold tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500">
+                Book Appointment
             </a>
         </nav>
     </header>
@@ -144,7 +144,7 @@
         </section>
 
         <!-- Aesthetic About Section -->
-        <section class="bg-brand-secondary text-white py-40">
+        <section id="about" class="bg-brand-secondary text-white py-40">
             <div class="max-w-[1440px] mx-auto px-8 flex flex-col lg:flex-row gap-24 items-center">
                 <div class="flex-1 order-2 lg:order-1">
                     <h2 class="text-5xl md:text-7xl font-heading mb-12 italic lowercase">the hanif philosophy</h2>
@@ -430,6 +430,27 @@
         </div>
     </footer>
  
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden bg-brand-secondary/95 backdrop-blur-xl transition-all duration-700 items-center justify-center opacity-0">
+        <button id="close-menu" class="absolute top-8 left-8 text-white/40 hover:text-white transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        
+        <div class="flex flex-col items-center justify-center h-full space-y-12">
+            <nav class="text-center space-y-8">
+                <a href="#services" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">services</a>
+                <a href="#about" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">philosophy</a>
+                <a href="#portfolio" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">portfolio</a>
+                <a href="#contact" class="menu-link block text-4xl md:text-6xl font-heading italic text-white/40 hover:text-white transition-all duration-500 lowercase opacity-0 translate-y-10">contact</a>
+            </nav>
+            
+            <div class="flex gap-8 mt-12 opacity-0 translate-y-10" id="menu-socials">
+                <a href="#" class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 hover:text-white transition-colors">Facebook</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Reservation Modal -->
     <div id="reservation-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto items-start justify-center p-4 sm:p-12 py-12 sm:py-24">
         <div id="modal-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
@@ -536,6 +557,75 @@
                         }
                     });
                 });
+            });
+
+            // Header Scroll Effect
+            const header = document.getElementById('main-header');
+            const nav = document.getElementById('header-nav');
+            const logo = document.getElementById('header-logo');
+            const menuBtn = document.getElementById('header-menu-btn');
+            const actionBtn = document.getElementById('header-action');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('bg-white/70', 'backdrop-blur-md', 'border-black/5');
+                    header.classList.remove('border-transparent');
+                    nav.classList.replace('h-24', 'h-16');
+                    logo.classList.replace('text-white', 'text-black');
+                    logo.classList.replace('text-2xl', 'text-xl');
+                    menuBtn.classList.replace('text-white', 'text-black');
+                    actionBtn.classList.replace('text-white', 'text-black');
+                } else {
+                    header.classList.remove('bg-white/70', 'backdrop-blur-md', 'border-black/5');
+                    header.classList.add('border-transparent');
+                    nav.classList.replace('h-16', 'h-24');
+                    logo.classList.replace('text-black', 'text-white');
+                    logo.classList.replace('text-xl', 'text-2xl');
+                    menuBtn.classList.replace('text-black', 'text-white');
+                    actionBtn.classList.replace('text-black', 'text-white');
+                }
+            });
+
+            // Mobile Menu Logic
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const menuLinks = document.querySelectorAll('.menu-link');
+            const menuSocials = document.getElementById('menu-socials');
+
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    setTimeout(() => {
+                        mobileMenu.classList.replace('opacity-0', 'opacity-100');
+                        menuLinks.forEach((link, i) => {
+                            setTimeout(() => {
+                                link.classList.remove('opacity-0', 'translate-y-10');
+                            }, i * 100 + 200);
+                        });
+                        setTimeout(() => {
+                            menuSocials.classList.remove('opacity-0', 'translate-y-10');
+                        }, 600);
+                    }, 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    menuLinks.forEach((link) => {
+                        link.classList.add('opacity-0', 'translate-y-10');
+                    });
+                    menuSocials.classList.add('opacity-0', 'translate-y-10');
+                    mobileMenu.classList.replace('opacity-100', 'opacity-0');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                    }, 700);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            menuBtn.addEventListener('click', () => toggleMenu(true));
+            closeMenuBtn.addEventListener('click', () => toggleMenu(false));
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
             });
 
             // Reservation Modal Logic
