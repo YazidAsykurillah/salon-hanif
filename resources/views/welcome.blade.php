@@ -309,37 +309,38 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
-                    <!-- Category 1: Facial -->
-                    <div class="group border-b border-brand-bg pb-12 hover:border-black transition-colors duration-700">
-                        <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-muted mb-8 block">Skin Rituals</span>
-                        <h3 class="text-3xl font-heading italic mb-6">Facial Treatment</h3>
-                        <div class="flex items-baseline gap-4 mb-8">
-                            <span class="text-xs text-brand-muted">Starting from</span>
-                            <span class="text-2xl font-light">Rp 350.000</span>
-                        </div>
-                        <p class="text-xs leading-relaxed text-brand-muted mb-8">Deep cleansing, hydration, and advanced dermal therapies tailored to your skin's unique needs.</p>
-                    </div>
-
-                    <!-- Category 2: Hair -->
+                    <!-- Category 1: Hair -->
                     <div class="group border-b border-brand-bg pb-12 hover:border-black transition-colors duration-700">
                         <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-muted mb-8 block">Hair Couture</span>
                         <h3 class="text-3xl font-heading italic mb-6">Hair Services</h3>
                         <div class="flex items-baseline gap-4 mb-8">
                             <span class="text-xs text-brand-muted">Starting from</span>
-                            <span class="text-2xl font-light">Rp 250.000</span>
+                            <span class="text-2xl font-light">Rp 50.000</span>
                         </div>
                         <p class="text-xs leading-relaxed text-brand-muted mb-8">Precision cutting, bespoke styling, and restorative spa treatments for vitality and movement.</p>
                     </div>
 
-                    <!-- Category 3: Nails -->
+                    <!-- Category 2: Facial -->
                     <div class="group border-b border-brand-bg pb-12 hover:border-black transition-colors duration-700">
-                        <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-muted mb-8 block">Aesthetic Hands</span>
-                        <h3 class="text-3xl font-heading italic mb-6">Nail Artistry</h3>
+                        <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-muted mb-8 block">Skin Rituals</span>
+                        <h3 class="text-3xl font-heading italic mb-6">Facial Treatment</h3>
                         <div class="flex items-baseline gap-4 mb-8">
                             <span class="text-xs text-brand-muted">Starting from</span>
                             <span class="text-2xl font-light">Rp 150.000</span>
                         </div>
-                        <p class="text-xs leading-relaxed text-brand-muted mb-8">Meticulous manicures, pedicures, and artistic details that define effortless elegance.</p>
+                        <p class="text-xs leading-relaxed text-brand-muted mb-8">Deep cleansing, hydration, and advanced dermal therapies tailored to your skin's unique needs.</p>
+                    </div>
+
+
+                    <!-- Category 3: Make Up -->
+                    <div class="group border-b border-brand-bg pb-12 hover:border-black transition-colors duration-700">
+                        <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-muted mb-8 block">Bespoke Artistry</span>
+                        <h3 class="text-3xl font-heading italic mb-6">Makeup Artist</h3>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <span class="text-xs text-brand-muted">Starting from</span>
+                            <span class="text-2xl font-light">Rp 250.000</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-brand-muted mb-8">Professional makeup services for weddings, events, and photoshoots, tailored to reveal your best self.</p>
                     </div>
                 </div>
 
@@ -427,9 +428,8 @@
         <div class="max-w-[1440px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-12">
             <span class="text-2xl font-bold tracking-[0.4em] uppercase">SALON HANIF</span>
             <div class="flex gap-10">
-                <a href="#" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Instagram</a>
+                <a href="https://www.instagram.com/salonhanif/" target="_blank" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Instagram</a>
                 <a href="#" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Facebook</a>
-                <a href="#" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity">Careers</a>
             </div>
             <p class="text-[10px] font-bold tracking-widest uppercase text-brand-muted">&copy; 2026 Crafted with precision.</p>
         </div>
@@ -450,7 +450,7 @@
             </nav>
             
             <div class="flex gap-8 mt-12 opacity-0 translate-y-10" id="menu-socials">
-                <a href="#" class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 hover:text-white transition-colors">Instagram</a>
+                <a href="https://www.instagram.com/salonhanif/" target="_blank" class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 hover:text-white transition-colors">Instagram</a>
                 <a href="#" class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/40 hover:text-white transition-colors">Facebook</a>
             </div>
         </div>
