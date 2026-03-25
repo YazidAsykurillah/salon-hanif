@@ -56,7 +56,7 @@
                         Elegant Beauty Treatments
                     </h1>
                     <p class="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/60 mt-6 md:mt-8 opacity-0 translate-y-10 animate-fade-in-up [animation-delay:400ms]">
-                        Experience premium care for your face, hair, and body.
+                        Experience premium care for your face and your hair.
                     </p>
                 </div>
 
