@@ -458,11 +458,11 @@
                             src="https://maps.google.com/maps?q=Salon%20Hanif%2C%20Jl.%20Durian%20Raya%20No.12%20C%2C%20Srondol%20Wetan%2C%20Kec.%20Banyumanik%2C%20Kota%20Semarang%2C%20Jawa%20Tengah%2050263&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                             width="100%" 
                             height="100%" 
-                            style="border:0; filter: grayscale(1) contrast(1.2) invert(0.9);" 
+                            style="border:0;" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade"
-                            class="grayscale opacity-60 group-hover:opacity-100 transition-all duration-1000"
+                            class="w-full h-full opacity-100 transition-all duration-1000"
                         ></iframe>
                     </div>
                 </div>
