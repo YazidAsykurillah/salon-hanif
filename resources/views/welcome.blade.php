@@ -49,7 +49,7 @@
                 <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20"></div>
             </div>
             
-            <div class="relative z-10 text-center px-6 mt-auto mb-20 md:mt-0 md:mb-24">
+            <div class="relative z-10 text-center px-6 mt-auto mb-32 md:mt-0 md:mb-24">
                 <h1 class="text-4xl md:text-[6rem] font-heading italic text-white leading-tight lowercase opacity-0 translate-y-10 animate-fade-in-up">
                     Elegant Beauty Treatments
                 </h1>
