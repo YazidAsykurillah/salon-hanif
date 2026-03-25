@@ -477,7 +477,7 @@
                      alt="Salon Hanif Primary Logo" 
                      class="h-12 w-auto mix-blend-multiply brightness-90 contrast-125 grayscale-0"
                      loading="lazy">
-                <span class="text-2xl font-bold tracking-[0.4em] uppercase">SALON HANIF</span>
+                <span class="text-1xl md:text-2xl font-bold tracking-[0.4em] uppercase">SALON HANIF</span>
             </div>
             <div class="flex gap-10">
                 <a href="https://www.instagram.com/salonhanif/" target="_blank" class="text-[10px] font-bold tracking-widest uppercase hover:opacity-50 transition-opacity" aria-label="Follow Salon Hanif on Instagram">Instagram</a>
