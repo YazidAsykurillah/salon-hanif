@@ -241,7 +241,7 @@
             <div class="max-w-[1440px] mx-auto px-8">
                 <div class="flex flex-col md:flex-row items-end justify-between mb-32 gap-8">
                     <div class="max-w-2xl">
-                        <span class="text-xs font-semibold tracking-[0.4em] uppercase text-brand-muted mb-6 block">Voices of Hanif</span>
+                        <span class="text-xs font-semibold tracking-[0.4em] uppercase text-brand-muted mb-6 block">Testimonials</span>
                         <h2 class="text-5xl md:text-7xl font-heading italic lowercase">client experiences</h2>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <!-- Testimonial 1 -->
                     <div class="flex flex-col">
-                        <div class="aspect-square overflow-hidden mb-8 grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
                             <img src="{{ asset('images/customer_1.png') }}" alt="Client" class="w-full h-full object-cover">
                         </div>
                         <div class="flex mb-4 text-brand-text">
@@ -261,7 +261,7 @@
 
                     <!-- Testimonial 2 -->
                     <div class="flex flex-col">
-                        <div class="aspect-square overflow-hidden mb-8 grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
                             <img src="{{ asset('images/hair_after.png') }}" alt="Client" class="w-full h-full object-cover">
                         </div>
                         <div class="flex mb-4 text-brand-text">
@@ -273,7 +273,7 @@
 
                     <!-- Testimonial 3 -->
                     <div class="flex flex-col">
-                        <div class="aspect-square overflow-hidden mb-8 grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
                             <img src="{{ asset('images/face_after.png') }}" alt="Client" class="w-full h-full object-cover">
                         </div>
                         <div class="flex mb-4 text-brand-text">
@@ -285,7 +285,7 @@
 
                     <!-- Testimonial 4 -->
                     <div class="flex flex-col">
-                        <div class="aspect-square overflow-hidden mb-8 grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="aspect-square overflow-hidden mb-8 grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700">
                             <img src="{{ asset('images/svc_makeup.png') }}" alt="Client" class="w-full h-full object-cover text-black">
                         </div>
                         <div class="flex mb-4 text-brand-text">
