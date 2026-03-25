@@ -43,9 +43,9 @@
             </a>
 
             <!-- Right: Action -->
-            <a href="#contact" id="header-action" class="flex items-center justify-center text-[10px] md:text-xs font-semibold tracking-[0.1em] md:tracking-[0.2em] text-white uppercase hover:opacity-70 transition-all duration-500 whitespace-nowrap min-w-[48px] min-h-[48px]" aria-label="Book an Appointment">
+            <a href="#contact" id="header-action" class="flex items-center justify-center text-[10px] md:text-xs font-semibold tracking-[0.2em] md:tracking-[0.4em] text-white uppercase hover:bg-white hover:text-black transition-all duration-500 whitespace-nowrap px-8 md:px-12 py-3 md:py-4 border border-white/20 backdrop-blur-sm" aria-label="Book an Appointment">
                 <span class="hidden md:inline">Book Appointment</span>
-                <span class="md:hidden px-2">Book</span>
+                <span class="md:hidden">Book</span>
             </a>
         </nav>
     </header>
@@ -632,6 +632,9 @@
                     logo.classList.replace('text-2xl', 'text-xl');
                     menuBtn.classList.replace('text-white', 'text-black');
                     actionBtn.classList.replace('text-white', 'text-black');
+                    actionBtn.classList.replace('border-white/20', 'border-black/20');
+                    actionBtn.classList.add('hover:bg-black', 'hover:text-white');
+                    actionBtn.classList.remove('hover:bg-white', 'hover:text-black');
                 } else {
                     header.classList.remove('bg-white/70', 'backdrop-blur-md', 'border-black/5');
                     header.classList.add('border-transparent');
@@ -640,6 +643,9 @@
                     logo.classList.replace('text-xl', 'text-2xl');
                     menuBtn.classList.replace('text-black', 'text-white');
                     actionBtn.classList.replace('text-black', 'text-white');
+                    actionBtn.classList.replace('border-black/20', 'border-white/20');
+                    actionBtn.classList.add('hover:bg-white', 'hover:text-black');
+                    actionBtn.classList.remove('hover:bg-black', 'hover:text-white');
                 }
             });
 
