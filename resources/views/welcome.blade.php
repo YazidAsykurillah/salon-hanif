@@ -45,7 +45,7 @@
         <!-- Hero Section -->
         <section class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
             <div class="absolute inset-0">
-                <img src="{{ asset('images/indonesian_beauty_hero.png') }}" alt="Beauty Detail" class="w-full h-full object-cover object-center md:object-right opacity-80 brightness-90 animate-subtle-zoom">
+                <img src="{{ asset('images/indonesian_beauty_hero.png') }}" alt="Beauty Detail" class="w-full h-full object-cover object-center md:object-right opacity-100 brightness-90 animate-subtle-zoom">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>
             </div>
             
